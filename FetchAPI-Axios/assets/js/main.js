@@ -4,6 +4,11 @@
 
 axios.get('pessoas.json').then(resposta => carregaElementosNaPagina(resposta.data));
 
+// fetch('./pessoas.json')
+//     .then(resposta => resposta.json())
+//     .then(json => carregaElementosNaPagina(json))
+//     .catch(error => console.log(error));
+
 function carregaElementosNaPagina(json){
     const table = document.createElement('table');
     for(let pessoa of json){
